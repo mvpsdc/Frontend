@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>heading tags</title>
+        <style media="screen">
+            th, td {border : 1px solid; width:50px; height:50px}
+        </style>
+    </head>
+    <body>
+        <!--Form 요소 : 폼 데이터를 그룹화하여 서버에 전송한다. action:폼데이터를 처리하기 위한 주소, method:데이터를 전송하는 방식(get : 민감한 정보 X 주소창에 결과값이 전달, post : 회원가입, 로그인)-->
+        <form action="/hello.html" method="GET">
+            <h1>Form Elements</h1>
+            <fieldset>
+                <legend>기본정보</legend>
+                <!--Label 요소 : 폼 컨트롤과 연결 시켜주기 위함으로 웹 접근성 향상에 도움이 된다. 필수.-->
+                <label for="userid">아이디:</label><input type = "text", placeholder="Write in Englsih" id="userid"><br>
+                <label for="userpw">비밀번호 : </label><input type="password" id="userpw"><br>
+                성별 : <label for="male">남자</label> <input type= "radio" name="sex" checked id="male">  <label for="female">여자</label> <input type= "radio" name="sex" id="female"><br>
+            </fieldset>
+            <fieldset>
+                <legend>추가요소</legend>
+                학년 : 1 <input type="checkbox" name="grade"> 2 <input type="checkbox" name="grade"> 3 <input type="checkbox" name="grade">                <br>
+                Upload Profil Photo : <input type="file"><br>
+                사는 지역 : <select name="" id="" multiple>
+                    <option>Seoul</option>
+                    <option>Gumi</option>
+                    <option>Suwon</option>
+                </select><br>
+                <!--Texterea 사용자에게 여러줄을 입력받고 싶을때-->
+                자기소개 : <textarea name="" id="" cols="30" rows="2" placeholder="자기소개는 100자 내로 작성"></textarea><br>
+                <!--Button 요소 : 사용자가 클릭 가능한 버튼, input 타입과 같은 기능, but 빈태그가 아니고 내용을 안에 직접 넣을수 있고 좀더 자유로워-->
+                <button type="submit">전송</button><br>
+                <button type="reset">전송</button><br>
+                <input type="submit" value="Submit"><br>
+                <input type="reset" value="cancel"><br>
+                <input type="button" value="register"><br>
+                <input type="image" src="" alt="" width=""> <!--submit 버튼에 이미지 삽입, 이미지기 때문에 Source, alt가 필요-->
+            </fieldset>
+        </form>
+    </body>
